@@ -36,6 +36,9 @@ public class SWTLayoutPositionTracker {
 		shell.addMouseMoveListener(e -> showSize(e, shell, label));
 		label.addMouseMoveListener(e -> showSize(e, shell, label));
 
+		// !! setBounds は位置とサイズの両方を設定している。
+		//  setLocation と setSize でも定義することができる !!
+
 		// シェルの開始し、イベントが発生しない場合はスリープ
 		shell.open();
 		while (!shell.isDisposed()) {
