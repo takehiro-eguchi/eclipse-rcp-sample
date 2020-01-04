@@ -15,6 +15,8 @@ import org.eclipse.swt.widgets.Layout;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
+import com.egu.example.swt.widgets.util.SWTUtil;
+
 /**
  * 初回のSWTアプリケーションです。
  * @author t-eguchi
@@ -47,17 +49,8 @@ public class FirstSWTApplication {
 		text.pack();
 		button.pack();
 
-		// 画面を開く
-		shell.open();
-		while (!shell.isDisposed()) {
-			// イベントが発生しない場合は、発生する迄スリープする
-			if (!display.readAndDispatch()) {
-				display.sleep();
-			}
-		}
-
-		// リソースの破棄
-		display.dispose();
+		// 開始
+		SWTUtil.startMonitoringEvent(display, shell);
 	}
 
 	/** テキストを追加します */

@@ -6,6 +6,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
+import com.egu.example.swt.widgets.util.SWTUtil;
+
 /**
  * ウィジェットのポジショニングを実現するオブジェクトです。
  * @author t-eguchi
@@ -40,15 +42,7 @@ public class SWTLayoutPositionTracker {
 		//  setLocation と setSize でも定義することができる !!
 
 		// シェルの開始し、イベントが発生しない場合はスリープ
-		shell.open();
-		while (!shell.isDisposed()) {
-			if (!display.readAndDispatch()) {
-				display.sleep();
-			}
-		}
-
-		// ディスプレイの破棄
-		display.dispose();
+		SWTUtil.startMonitoringEvent(display, shell);
 	}
 
 	/** ポジション情報を表示します */

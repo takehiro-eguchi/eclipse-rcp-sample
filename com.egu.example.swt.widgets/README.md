@@ -19,3 +19,6 @@ https://www.vogella.com/tutorials/SWT/article.html#optional-exercise-use-swt-in-
 * StackLayout
     * このレイアウトは、すべてのコントロールの上部にスタックし、すべてのコントロールのサイズと位置が同じになるようにサイズを変更します。 topControlで指定されたコントロールは表示され、他のすべてのコントロールは表示されません。
 
+レイアウトマネージャにコントロールを割り当てると **pack** を呼ぶ必要がなくなる。
+
+
