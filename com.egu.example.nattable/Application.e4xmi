@@ -5,6 +5,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.partstack.sample" accessibilityPhrase="">
         <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.part.nattabledata" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.NatTableDataExamplePart" label="NatTableDataExample" iconURI="platform:/plugin/com.egu.example.nattable/icons/home.png"/>
         <children xsi:type="basic:Part" xmi:id="_LwJZEC-fEeqFBKfqcg1qGw" elementId="com.egu.example.nattable.part.nattablelayerstack" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.NatTableLayerStackExamplePart" label="NatTableLayerStackExamplePart "/>
+        <children xsi:type="basic:Part" xmi:id="_isSdUC-iEeqFBKfqcg1qGw" elementId="com.egu.example.nattable.part.nattablecomposition" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.NatTableCompositionExamplePart" label="NatTableCompositionExamplePart"/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
