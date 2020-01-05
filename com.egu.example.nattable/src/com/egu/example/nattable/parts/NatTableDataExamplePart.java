@@ -1,6 +1,6 @@
 package com.egu.example.nattable.parts;
 
-import org.eclipse.nebula.widgets.nattable.NatTable;
+//import org.eclipse.nebula.widgets.nattable.NatTable;
 
 /**
  * {@link NatTable} を利用したサンプルパートです。
