@@ -15,6 +15,16 @@
 
    <windowImages/>
 
+
+   <launcher>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
    <plugins>
       <plugin id="com.egu.example.nattable"/>
       <plugin id="com.ibm.icu"/>
@@ -75,6 +85,10 @@
       <plugin id="org.eclipse.equinox.registry"/>
       <plugin id="org.eclipse.jface"/>
       <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.nebula.widgets.nattable.core"/>
+      <plugin id="org.eclipse.nebula.widgets.nattable.core.source"/>
+      <plugin id="org.eclipse.nebula.widgets.nattable.extension.e4"/>
+      <plugin id="org.eclipse.nebula.widgets.nattable.extension.e4.source"/>
       <plugin id="org.eclipse.osgi"/>
       <plugin id="org.eclipse.osgi.compatibility.state" fragment="true"/>
       <plugin id="org.eclipse.osgi.services"/>
