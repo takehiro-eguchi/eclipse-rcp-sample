@@ -46,4 +46,7 @@ MANIFEST.MFファイルを開き、次の依存関係を[依存関係]セクシ�
 * org.eclipse.nebula.widgets.nattable.extension.glazedlists
 * org.eclipse.nebula.widgets.nattable.extension.nebula
 
+上記のプラグインを製品構成の「内容」にも追加する。
+
 製品定義ファイルを開き、IDフィールドにcom.egu.example.nattable.productを入力します。
+

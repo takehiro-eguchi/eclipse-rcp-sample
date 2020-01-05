@@ -2,8 +2,9 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_6wlLcMgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.application" bindingContexts="_6wlLecgZEeSyMNYR5xypkQ">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_6wlLccgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.window.main" label="Eclipse 4 RCP NatTable" width="500" height="400">
     <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.partsashcontainer.sample">
-      <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.partstack.sample">
-        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.part.sample" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.SamplePart" iconURI="platform:/plugin/com.egu.example.nattable/icons/home.png" label="Sample Part"/>
+      <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.partstack.sample" accessibilityPhrase="">
+        <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.egu.example.nattable.part.nattabledata" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.NatTableDataExamplePart" label="NatTableDataExample" iconURI="platform:/plugin/com.egu.example.nattable/icons/home.png"/>
+        <children xsi:type="basic:Part" xmi:id="_LwJZEC-fEeqFBKfqcg1qGw" elementId="com.egu.example.nattable.part.nattablelayerstack" contributionURI="bundleclass://com.egu.example.nattable/com.egu.example.nattable.parts.NatTableLayerStackExamplePart" label="NatTableLayerStackExamplePart "/>
       </children>
     </children>
     <mainMenu xmi:id="_6wlLicgZEeSyMNYR5xypkQ" elementId="org.eclipse.ui.main.menu">
