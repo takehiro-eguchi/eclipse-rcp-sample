@@ -13,6 +13,8 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
+import com.egu.example.jface.util.SWTUtil;
+
 /**
  * {@link LocalResourceManager} を利用したサンプルです。
  * https://www.vogella.com/tutorials/EclipseJFace/article.html#jface_localresoucemanager
@@ -21,6 +23,7 @@ import org.eclipse.swt.widgets.Shell;
  */
 public class LocalResourceManagerExample {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// ウィンドウの生成
 		Display display = new Display();
@@ -36,6 +39,9 @@ public class LocalResourceManagerExample {
 		ImageDescriptor imageDescriptor = ImageDescriptor.createFromFile(
 				LocalResourceManagerExample.class, "hoge.png");
 		Image image = resManager.createImage(imageDescriptor);
+
+		// 開始
+		SWTUtil.startMonitoringEvent(display, composite);
 	}
 
 }
