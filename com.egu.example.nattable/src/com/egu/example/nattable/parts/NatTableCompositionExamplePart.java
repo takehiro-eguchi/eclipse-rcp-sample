@@ -14,9 +14,11 @@ import org.eclipse.nebula.widgets.nattable.data.ReflectiveColumnPropertyAccessor
 import org.eclipse.nebula.widgets.nattable.grid.GridRegion;
 import org.eclipse.nebula.widgets.nattable.grid.data.DefaultColumnHeaderDataProvider;
 import org.eclipse.nebula.widgets.nattable.grid.layer.ColumnHeaderLayer;
+import org.eclipse.nebula.widgets.nattable.hideshow.ColumnHideShowLayer;
 import org.eclipse.nebula.widgets.nattable.layer.CompositeLayer;
 import org.eclipse.nebula.widgets.nattable.layer.DataLayer;
 import org.eclipse.nebula.widgets.nattable.layer.ILayer;
+import org.eclipse.nebula.widgets.nattable.reorder.ColumnReorderLayer;
 import org.eclipse.nebula.widgets.nattable.selection.SelectionLayer;
 import org.eclipse.nebula.widgets.nattable.viewport.ViewportLayer;
 import org.eclipse.swt.layout.GridLayout;
@@ -53,10 +55,14 @@ public class NatTableCompositionExamplePart {
 		IDataProvider bodyDataProvider = new ListDataProvider<Person>(
 				personService.getPersons(50), columnPropertyAccessor);
 
+		// TODO ここに渡すオブジェクトはPOJOよりマッピングがよい。メタデータはenumの方が拡張性がある。（色など）
+
 		// 本体部分のレイヤーを生成
 		DataLayer bodyDataLayer = new DataLayer(bodyDataProvider);
 		SelectionLayer selectionLayer = new SelectionLayer(bodyDataLayer);
-		ViewportLayer viewportLayer = new ViewportLayer(selectionLayer);
+		ColumnHideShowLayer hideShowLayer = new ColumnHideShowLayer(selectionLayer);
+		ColumnReorderLayer reorderLayer = new ColumnReorderLayer(hideShowLayer);
+		ViewportLayer viewportLayer = new ViewportLayer(reorderLayer);
 
 		// カラムヘッダ提供者を生成
 		Map<String, String> propertyToLabelMap = new HashMap<>();
